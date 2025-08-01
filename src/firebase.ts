@@ -2,10 +2,10 @@
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore"; // ✅ Add this
+import { getFirestore } from "firebase/firestore"; 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD6DhPWj4PFIRWMQTu6s7OAo8auDrh35QM",
+  apiKey: "",
   authDomain: "warranty-vault-1b7b3.firebaseapp.com",
   projectId: "warranty-vault-1b7b3",
   storageBucket: "warranty-vault-1b7b3.firebasestorage.app",
@@ -16,6 +16,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app); // ✅ Add this
+const db = getFirestore(app); 
 
-export { app, auth, db }; // ✅ Export db
+export { app, auth, db }; 
