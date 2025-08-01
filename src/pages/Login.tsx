@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // ✅ combined
+import { Link, useNavigate } from "react-router-dom"; 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,7 +13,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate(); // ✅ place here
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Login successful:", userCredential.user);
 
-      // ✅ use React Router's navigation (SPA-friendly)
+      //  React Router's navigation (SPA-friendly)
       navigate("/dashboard");
     } catch (error: any) {
       console.error("Login failed:", error.message);
